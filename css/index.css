@@ -2,6 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+a {
+    text-decoration: none;
+}
 
 html,
 body,
@@ -132,4 +135,90 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.container {
+    /* 1024px */
+    max-width: 64rem;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+
+nav,
+nav>div>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    margin-right: 1rem;
+}
+
+.hero {
+    background-image: url("../assets/hero.jpg");
+    /* background-color: slategray; */
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 568px;
+}
+
+.ourteacherImg {
+    margin-right: 1rem;
+    border-radius: 100%;
+    width: 15rem;
+    height: auto
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 6px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    background-color: #f9f9f9;
+    /* Custom background color */
+    border: 2px solid #ccc;
+    /* Custom border */
+    padding: 15px;
+    /* Custom padding */
+    margin-bottom: 20px;
+    /* Custom margin */
+    margin-left: 1rem;
 }
