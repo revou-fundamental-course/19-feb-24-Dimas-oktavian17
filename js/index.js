@@ -1,8 +1,12 @@
+// * home page promot
+let nameInput = prompt("Masukan nama Anda sebelum akses.");
+let nameUser = ''
+nameInput === null || nameInput.trim() === "" ? nameUser = "Kamu" : nameUser = nameInput;
+document.getElementById("IdUser").textContent = nameUser;
 // * form validation
 const SubmitForm = document.querySelector('[aria-label="contact-form"]')
 SubmitForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const userName = document.querySelector('#nameUser').value;
     const Dob = document.querySelector('#birth').value;
     const MessageUser = document.querySelector('textarea').value;
