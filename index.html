@@ -9,16 +9,12 @@
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Shop at Egrociers for a convenient and hassle-free online grocery shopping experience" />
-    <meta name="keywords" content="egrociers, online grocery, grocery store, revou, fcse mini project" />
-    <title>E-Groceries Store</title>
+    <title>Pluto Company</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="icon" href="./assets/favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -27,7 +23,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <figure>
-                        <svg id="logo-83" width="40" height="35" viewBox="0 0 40 35" fill="none"
+                        <svg id="logo-83" width="40" height="35" viewBox="0 0 40 35" fill="0000"
                             xmlns="http://www.w3.org/2000/svg">
                             <path class="ccustom" fill-rule="evenodd" clip-rule="evenodd"
                                 d="M25 30C26.3132 30 27.6136 29.7413 28.8268 29.2388C30.0401 28.7362 31.1425 27.9997 32.0711 27.0711C32.9997 26.1425 33.7362 25.0401 34.2388 23.8268C34.7413 22.6136 35 21.3132 35 20C35 16.0218 33.4196 12.2064 30.6066 9.3934C27.7936 6.58035 23.9782 5 20 5C16.0218 5 12.2064 6.58035 9.3934 9.3934C6.58035 12.2064 5 16.0218 5 20C5 21.3132 5.25866 22.6136 5.7612 23.8268C6.26375 25.0401 7.00035 26.1425 7.92893 27.0711C8.85752 27.9997 9.95991 28.7362 11.1732 29.2388C12.3864 29.7413 13.6868 30 15 30H25ZM20 9C17.0826 9 14.2847 10.1589 12.2218 12.2218C10.1589 14.2847 9 17.0826 9 20C9 20.7879 9.15519 21.5681 9.45672 22.2961C9.75825 23.0241 10.2002 23.6855 10.7574 24.2426C11.3145 24.7998 11.9759 25.2417 12.7039 25.5433C13.4319 25.8448 14.2121 26 15 26H25C25.7879 26 26.5681 25.8448 27.2961 25.5433C28.0241 25.2417 28.6855 24.7998 29.2426 24.2426C29.7998 23.6855 30.2417 23.0241 30.5433 22.2961C30.8448 21.5681 31 20.7879 31 20C31 17.0826 29.8411 14.2847 27.7782 12.2218C25.7153 10.1589 22.9174 9 20 9Z"
@@ -41,16 +37,20 @@
                         </svg>
                     </figure>
                 </div>
-                <button class="menu-button" id="menu-button" onclick="toggleMenuButton()">
-                    <i data-feather="menu"></i>
+                <button class="menu-button" id="menu-button">
+                    <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em"
+                        viewBox="0 0 16 16">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5" />
+                    </svg>
                 </button>
                 <ul class="navigation-list" id="menu-list">
-                    <li><a href="#hero" onclick="setTitle(this)">Home</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li>
-                        <a href="#our-package" onclick="setTitle(this)">Our Profile</a>
+                        <a href="#our-package">Our Profile</a>
                     </li>
-                    <li><a href="#call-us" onclick="setTitle(this)">About Us</a></li>
-                    <li><a href="#call-us" onclick="setTitle(this)">Message Us</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#call-us">Message Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -62,9 +62,11 @@
             <div class="hero-wrapper ">
                 <h1 class="main-title">Hi <span id="IdUser"></span>, Welcome to website</h1>
                 <p class="hero-description">We are great consultant</p>
-                <button class="button" onclick="getStartButton()">
-                    Get started!
-                </button>
+                <a href="#call-us">
+                    <button class="button">
+                        Get started!
+                    </button>
+                </a>
             </div>
         </aside>
         <!-- our profile -->
@@ -102,7 +104,7 @@
         </div>
         <!-- end our profile -->
         <!-- about us -->
-        <div class="container">
+        <div class="container" id="about-us">
             <div class="package-banner">
                 <div class="container">
                     <h2 class="section-title">About Us</h2>
@@ -133,7 +135,7 @@
             </div>
         </div>
         <!-- end about us -->
-        <div class="container">
+        <div class="container" id="call-us">
             <div class="package-banner">
                 <div class="container">
                     <h2 class="section-title">Message Us</h2>
@@ -157,11 +159,14 @@
                             <label for="birth" class="input-label">Your Dob*</label>
                             <input type="date" id="birth" name="birth" class="input-field" />
                             <p class="error-msg" id="email-error">
-                                Please fill your email with a correct format
+                                Please fill your Dob with a correct format
                             </p>
                         </div>
                         <div class="form-field">
                             <h1 class="input-label">Your Gender*</h1>
+                            <p class="error-msg" id="email-error">
+                                Please fill your Gender with a correct format
+                            </p>
                             <div class="gender-wrap">
                                 <div class="">
                                     <label for="laki" class="input-label">Pria</label>
@@ -176,6 +181,9 @@
                         </div>
                         <div class="form-field">
                             <h1 class="input-label">Your Message*</h1>
+                            <p class="error-msg" id="email-error">
+                                Please fill your message with a correct format
+                            </p>
                             <div class="textarea-wrap">
                                 <div class="">
                                     <textarea class="input-field">
@@ -186,48 +194,46 @@
                         <button type="submit" class="button">Send</button>
                     </form>
                 </div>
-                <!-- <div class="contact">
-                    <h2 class="subsection-title">Contact Us</h2>
+                <!-- your data -->
+                <div class="contact">
+                    <h2 class="subsection-title">Your Data</h2>
                     <p>
-                        Sales akan menghubungi Anda 1x24 jam setelah data anda kami terima
+                        Current Time: <span class="contact-higlight" id="currentTime"></span>
                     </p>
-                    <form class="contact-form" name="contact-form" onsubmit="return validateForm()">
+                    <form class="contact-form" name="contact-form">
                         <div class="form-field">
-                            <label for="name" class="input-label">Your name:</label>
-                            <input type="text" id="name" name="name" class="input-field"
-                                placeholder="First name and last name" oninput="fillInput('name')" />
-                            <p class="error-msg" id="name-error">Please fill your name</p>
+                            <label for="YourName" class="input-label">Your name</label>
+                            <h2 id="YourName" name="YourName" class="input-field">
+                            </h2>
                         </div>
                         <div class="form-field">
-                            <label for="email" class="input-label">Email Address:</label>
-                            <input type="text" id="email" name="email" class="input-field"
-                                placeholder="example@email.com" oninput="fillInput('email')" />
-                            <p class="error-msg" id="email-error">
-                                Please fill your email with a correct format
-                            </p>
+                            <label for="Yourbirth" class="input-label">Your Dob</label>
+                            <h2 id="Yourbirth" name="Yourbirth" class="input-field">
+                            </h2>
                         </div>
                         <div class="form-field">
-                            <label for="interest" class="input-label">What are you interested in?</label>
-                            <select id="interest" name="interest" class="input-field" oninput="selectInterest()">
-                                <option value="none" selected disabled>Select option</option>
-                                <option value="option 1">Option 1</option>
-                                <option value="option 2">Option 2</option>
-                                <option value="option 3">Option 3</option>
-                            </select>
-                            <p class="error-msg" id="interest-error">
-                                Please select one interest
-                            </p>
+                            <label for="Yourgender" class="input-label">Your Gender</label>
+                            <h2 id="Yourgender" name="Yourgender" class="input-field">
+                            </h2>
                         </div>
-                        <button type="submit" class="button">Send</button>
+                        <div class="form-field">
+                            <h1 class="input-label">Your Message</h1>
+                            <div class="textarea-wrap">
+                                <div class="">
+                                    <textarea class="input-field" readonly id="Yourmessage">
+                                  </textarea>
+                                </div>
+                            </div>
+                        </div>
                     </form>
-                </div> -->
+                </div>
             </div>
         </div>
         <div class="cta" id="call-us">
             <div class="container">
-                <h2 class="section-title">Embrace the Future with Our E-Groceries</h2>
-                <p>Revolutionize Your Grocery Shopping Experience</p>
-                <button class="button">Hubungi Kami</button>
+                <h2 class="section-title">Growth with pluto company</h2>
+                <p>Thank's for your antention</p>
+                <button class="button" aria-label="toTop">Back to top</button>
             </div>
         </div>
     </main>
