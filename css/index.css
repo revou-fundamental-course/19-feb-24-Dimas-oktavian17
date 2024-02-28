@@ -230,9 +230,7 @@ table {
     position: fixed;
     top: 0;
     z-index: 1;
-    /* background-color: var(--orange-medium); */
     backdrop-filter: blur(8px);
-    backdrop-filter: 2rem;
     width: 100vw;
 }
 
@@ -249,19 +247,13 @@ table {
 }
 
 .menu-button {
+    border: none;
     padding: var(--size-1) var(--size-2);
-    border: 2px solid var(--orange-light);
-    background-color: var(--orange-dark2);
+    background-color: transparent;
     color: var(--light-100);
     border-radius: var(--size-1);
     font-family: inherit;
     display: block;
-}
-
-.menu-button:hover {
-    background-color: var(--orange-dark);
-    color: var(--light-100);
-    cursor: pointer;
 }
 
 .navigation-list {
@@ -271,7 +263,8 @@ table {
     padding: var(--size-4);
     position: absolute;
     width: var(--w-12);
-    background-color: var(--orange-dark);
+    background-color: var(--light-100);
+    align-items: center;
     z-index: -1;
     top: 0;
     left: 0;
@@ -288,8 +281,6 @@ table {
 
 .navigation-list li {
     padding: var(--size-2) var(--size-2);
-    border: 1px solid black;
-    border-radius: 5px;
 }
 
 .navigation-list li a {
@@ -330,7 +321,7 @@ table {
 .hero-wrapper {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(0 0 0 / 0.4);
+    background-color: #3a5eeeb5;
     color: var(--light-100);
     display: flex;
     flex-direction: column;
@@ -489,7 +480,6 @@ table {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     place-items: center;
-    /* flex-direction: column; */
     gap: var(--size-6);
     padding: var(--size-6);
 
@@ -682,6 +672,11 @@ figure:hover {
         width: auto;
         background-color: transparent;
         z-index: 0;
+    }
+
+    .navigation-list li {
+        border: 1px solid black;
+        border-radius: 5px;
     }
 
     .about-contact {
